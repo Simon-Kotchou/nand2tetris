@@ -1,0 +1,32 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/02/Inc16.hdl
+
+/**
+ * 16-bit incrementer:
+ * out = in + 1 (arithmetic addition)
+ */
+
+CHIP Inc16 {
+    IN in[16];
+    OUT out[16];
+
+    PARTS:
+    HalfAdder(a=in[0],b=true,sum=out[0],carry=out1);
+    HalfAdder(a=in[1],b=out1,sum=out[1],carry=out2);
+    HalfAdder(a=in[2],b=out2,sum=out[2],carry=out3);
+    HalfAdder(a=in[3],b=out3,sum=out[3],carry=out4);
+    HalfAdder(a=in[4],b=out4,sum=out[4],carry=out5);
+    HalfAdder(a=in[5],b=out5,sum=out[5],carry=out6);
+    HalfAdder(a=in[6],b=out6,sum=out[6],carry=out7);
+    HalfAdder(a=in[7],b=out7,sum=out[7],carry=out8);
+    HalfAdder(a=in[8],b=out8,sum=out[8],carry=out9);
+    HalfAdder(a=in[9],b=out9,sum=out[9],carry=out10);
+    HalfAdder(a=in[10],b=out10,sum=out[10],carry=out11);
+    HalfAdder(a=in[11],b=out11,sum=out[11],carry=out12);
+    HalfAdder(a=in[12],b=out12,sum=out[12],carry=out13);
+    HalfAdder(a=in[13],b=out13,sum=out[13],carry=out14);
+    HalfAdder(a=in[14],b=out14,sum=out[14],carry=out15);
+    HalfAdder(a=in[15],b=out15,sum=out[15],carry=out16);
+}
